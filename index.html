@@ -39,9 +39,6 @@
         if (ev.domEvent.keyCode === 13) {
           if (curr_line) {
             handleCommand(curr_line);
-            // term.write("\r\n");
-            // refresh();
-            // term.write("");
             curr_line = "";
           }
         } else if (ev.domEvent.keyCode === 8) {
@@ -156,7 +153,7 @@
         if (guid) {
             load("Searching for geographical data", Math.random() * 2 + 3).then(() => {
                 if (guid.hashCode() == correctGUID) {
-                    writeLines("\n2 snapshots found.\n  March 19 2021: 64°08'56.6\"N 21°57'23.3\"W\n  April 27 2021: 6°10'46.5\"S 106°49'37.6\"E");
+                    writeLines("\n2 snapshots found.\n  April 27 2021: 64°08'56.6\"N 21°57'23.3\"W\n  May 21 2021: 6°10'46.5\"S 106°49'37.6\"E");
                 } else {
                     writeLine("No geographical data found for the given GUID.")
                 }
